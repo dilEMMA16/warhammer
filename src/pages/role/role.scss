@@ -1,4 +1,4 @@
-page-home {
+page-role {
 
   ion-card {
     position: relative;
@@ -7,7 +7,7 @@ page-home {
 
   .card-title {
     position: absolute;
-    top: 36%;//was 36
+    top: 45%;//was 36
     font-size: 6.0em;
     width: 100%;
 
@@ -20,7 +20,7 @@ page-home {
     position: absolute;
     top: 52%;
     width: 100%;
-    color: gray;
+    color: #fff;
   }
 
 }

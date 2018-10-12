@@ -5,6 +5,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { CodexPage } from '../pages/codex/codex';
+import { RolePage } from '../pages/role/role';
+import { ChooseTeamPage } from '../pages/chooseteam/chooseteam';
+import { TeamRosterPage } from '../pages/teamroster/teamroster';
+import { ChooseCampaignPage } from '../pages/choosecampaign/choosecampaign';
+import { CampaignPage } from '../pages/campaign/campaign';
+import { MissionPage } from '../pages/mission/mission';
 
 @Component({
   templateUrl: 'app.html'
@@ -22,7 +29,14 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'List', component: ListPage },
+      { title: 'Codex', component: CodexPage },
+      { title: 'Role', component: RolePage },
+      { title: 'Choose Team', component: ChooseTeamPage },
+      { title: 'Team Roster', component: TeamRosterPage },
+      { title: 'Choose Campaign', component: ChooseCampaignPage },
+      { title: 'Campaign', component: CampaignPage },
+      { title: 'Mission', component: MissionPage }
     ];
 
   }

@@ -1,4 +1,4 @@
-page-home {
+page-choosecampaign {
 
   ion-card {
     position: relative;
@@ -7,12 +7,12 @@ page-home {
 
   .card-title {
     position: absolute;
-    top: 36%;//was 36
-    font-size: 6.0em;
+    top: 45%;//was 36
+    font-size: 2.0em;
     width: 100%;
-
-    font-family: 'Sedgwick Ave Display', cursive;
-    color: gray;
+    font-weight: bold;
+    //font-family: 'Sedgwick Ave Display', cursive;
+    color: #fff;
   }
 
   .card-subtitle {
@@ -20,7 +20,7 @@ page-home {
     position: absolute;
     top: 52%;
     width: 100%;
-    color: gray;
+    color: #fff;
   }
 
 }
