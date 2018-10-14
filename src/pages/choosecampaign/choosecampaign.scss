@@ -4,6 +4,9 @@ page-choosecampaign {
     position: relative;
     text-align: center;
   }
+  body {
+    font-family: 'Anaheim', sans-serif;
+  }
 
   .card-title {
     position: absolute;
@@ -11,6 +14,7 @@ page-choosecampaign {
     font-size: 2.0em;
     width: 100%;
     font-weight: bold;
+    font-family: 'Anaheim', sans-serif;
     //font-family: 'Sedgwick Ave Display', cursive;
     color: #fff;
   }

@@ -9,119 +9,61 @@
 
 <ion-content class="card-background-page">
 
-  <ion-card>
-    <img src="assets/imgs/smallblank.png"/>
-    <div class="card-title">Adeptus Mechanicus</div>
-    <!--<div class="card-subtitle">41 Listings</div>-->
-  </ion-card>
-
-  <ion-card>
-    <img src="assets/imgs/smallblank.png"/>
-    <div class="card-title">Chaos Daemons</div>
-      <!--<div class="card-subtitle">41 Listings</div>-->
-  </ion-card>
-
-  <ion-card>
-    <img src="assets/imgs/smallblank.png"/>
-    <div class="card-title">T'au Empire</div>
-      <!--<div class="card-subtitle">41 Listings</div>-->
-  </ion-card>
-
-  <ion-card>
-    <img src="assets/imgs/smallblank.png"/>
-    <div class="card-title">Thousand Sons</div>
-      <!--<div class="card-subtitle">41 Listings</div>-->
-  </ion-card>
-
-  <ion-card>
-    <img src="assets/imgs/smallblank.png"/>
-    <div class="card-title">Imperial Knights</div>
-      <!--<div class="card-subtitle">41 Listings</div>-->
-  </ion-card>
-
-  <ion-card>
-    <img src="assets/imgs/smallblank.png"/>
-    <div class="card-title">Deathwatch</div>
-      <!--<div class="card-subtitle">41 Listings</div>-->
-  </ion-card>
-
-  <ion-card>
-    <img src="assets/imgs/smallblank.png"/>
-    <div class="card-title">Tyranids</div>
-      <!--<div class="card-subtitle">41 Listings</div>-->
-  </ion-card>
-
-  <ion-card>
-    <img src="assets/imgs/smallblank.png"/>
-    <div class="card-title">Blood Angels</div>
-      <!--<div class="card-subtitle">41 Listings</div>-->
-  </ion-card>
-
-  <ion-card>
-    <img src="assets/imgs/smallblank.png"/>
-    <div class="card-title">Astra Militarum</div>
-      <!--<div class="card-subtitle">41 Listings</div>-->
-  </ion-card>
-
-  <ion-card>
-    <img src="assets/imgs/smallblank.png"/>
-    <div class="card-title">Adeptus Custodes</div>
-      <!--<div class="card-subtitle">41 Listings</div>-->
-  </ion-card>
-
-  <ion-card (click)="navigateToChooseTeamPage('space marines')">
-    <img src="assets/imgs/smallblank.png"/>
-    <div class="card-title">Space Marines</div>
-      <!--<div class="card-subtitle">41 Listings</div>-->
-  </ion-card>
-
-  <ion-card>
-    <img src="assets/imgs/smallblank.png"/>
-    <div class="card-title">Space Wolves</div>
-      <!--<div class="card-subtitle">41 Listings</div>-->
-  </ion-card>
-
-  <ion-card>
-    <img src="assets/imgs/smallblank.png"/>
-    <div class="card-title">Necrons</div>
-      <!--<div class="card-subtitle">41 Listings</div>-->
-  </ion-card>
-
-  <ion-card>
-    <img src="assets/imgs/smallblank.png"/>
-    <div class="card-title">Craftworlds</div>
-      <!--<div class="card-subtitle">41 Listings</div>-->
-  </ion-card>
-
-  <ion-card>
-    <img src="assets/imgs/smallblank.png"/>
-    <div class="card-title">Harlequins</div>
-      <!--<div class="card-subtitle">41 Listings</div>-->
-  </ion-card>
-
-  <ion-card>
-    <img src="assets/imgs/smallblank.png"/>
-    <div class="card-title">Death Guard</div>
-      <!--<div class="card-subtitle">41 Listings</div>-->
-  </ion-card>
-
-  <ion-card>
-    <img src="assets/imgs/smallblank.png"/>
-    <div class="card-title">Grey Knights</div>
-      <!--<div class="card-subtitle">41 Listings</div>-->
-  </ion-card>
-
-  <ion-card>
+  <ion-card (click)="navigateToChooseTeamPage('drukhari')">
     <img src="assets/imgs/smallblank.png"/>
     <div class="card-title">Drukhari</div>
       <!--<div class="card-subtitle">41 Listings</div>-->
   </ion-card>
 
-  <ion-card>
+  <ion-card (click)="navigateToChooseTeamPage('eldar')">
     <img src="assets/imgs/smallblank.png"/>
-    <div class="card-title">Dark Angels</div>
+    <div class="card-title">Eldars</div>
       <!--<div class="card-subtitle">41 Listings</div>-->
   </ion-card>
+
+  <ion-card (click)="navigateToChooseTeamPage('genestealer')">
+    <img src="assets/imgs/smallblank.png"/>
+    <div class="card-title">Genestealer Cult</div>
+      <!--<div class="card-subtitle">41 Listings</div>-->
+  </ion-card>
+
+  <ion-card (click)="navigateToChooseTeamPage('harlequins')">
+    <img src="assets/imgs/smallblank.png"/>
+    <div class="card-title">Harlequins</div>
+      <!--<div class="card-subtitle">41 Listings</div>-->
+  </ion-card>
+
+
+  <ion-card (click)="navigateToChooseTeamPage('necron')">
+    <img src="assets/imgs/smallblank.png"/>
+    <div class="card-title">Necrons</div>
+      <!--<div class="card-subtitle">41 Listings</div>-->
+  </ion-card>
+
+  <ion-card (click)="navigateToChooseTeamPage('ork')">
+    <img src="assets/imgs/smallblank.png"/>
+    <div class="card-title">Orks</div>
+      <!--<div class="card-subtitle">41 Listings</div>-->
+  </ion-card> 
+
+
+  <ion-card (click)="navigateToChooseTeamPage('tau')">
+    <img src="assets/imgs/smallblank.png"/>
+    <div class="card-title">T'au Empire</div>
+    <!--<div class="card-subtitle">41 Listings</div>-->
+  </ion-card>
+
+
+  <ion-card (click)="navigateToChooseTeamPage('tyranid')">
+    <img src="assets/imgs/smallblank.png"/>
+    <div class="card-title">Tyranids</div>
+      <!--<div class="card-subtitle">41 Listings</div>-->
+  </ion-card>
+
+
+
+
+
 
 
 

@@ -5,6 +5,10 @@ page-chooseteam {
     text-align: center;
   }
 
+  body {
+    font-family: 'Anaheim', sans-serif;
+  }
+
   .card-title {
     position: absolute;
     top: 45%;//was 36
@@ -18,9 +22,18 @@ page-chooseteam {
   .card-subtitle {
     font-size: 1.0em;
     position: absolute;
-    top: 52%;
+    top: 32%;
     width: 100%;
     color: #fff;
   }
+
+
+.text {
+ background-color: #4CAF50;
+ color: white;
+ font-size: 16px;
+ padding: 16px 32px;
+ display:none;
+}
 
 }

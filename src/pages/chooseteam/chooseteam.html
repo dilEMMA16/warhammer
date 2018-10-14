@@ -10,27 +10,52 @@
   <ion-card style="" >
     <br><h1 style="color:gray;">Leaders</h1><br>
     <div *ngFor="let character of leaders; let i = index" style="width:33%;padding: 20px; float:left;">
-            <img src="assets/imgs/logo.png"/><br>
-            {{character}}
-            <ng-container *ngIf="i % 3">
-              <br><br>
-            </ng-container>
+      <div style="position:relative;" (click)="selectCharacter(character)">
+
+        <img src = "assets/imgs/teamroster/{{character}}.png" id="{{character}}" style="">
+        {{character}}
+        <ng-container *ngIf="i % 3">
+          <br><br><br>
+        </ng-container>
+        <div id="{{character}}text" style="display: none;position:absolute;width:100%;text-align: center;height: auto;background-color:gray;opacity: 0.9;color:white;top:0;left:0;padding: 10px;font-size:16px;z-index:5;"></div>
+
+      </div>
+
       </div>
       <!--<div class="card-subtitle">41 Listings</div>-->
   </ion-card>
   <ion-card style="" >
     <br><h1 style="color:gray;">Members</h1><br>
-    <div *ngFor="let character of members" style="width:33%;padding: 20px; float:left;">
-            <img src="assets/imgs/logo.png"/><br>
-            {{character}}
+    <div *ngFor="let character of members; let i = index" style="width:33%; height: 40%;padding: 20px; float:left; position:relative;" >
+
+      <div style="position:relative;" (click)="selectCharacter(character)">
+
+        <img src = "assets/imgs/teamroster/{{character}}.png" id="{{character}}" style="">
+        {{character}}
+        <ng-container *ngIf="i % 3">
+          <br><br><br>
+        </ng-container>
+        <div id="{{character}}text" style="display: none;position:absolute;width:100%;text-align: center;height: auto;background-color:gray;opacity: 0.9;color:white;top:0;left:0;padding: 10px;font-size:16px;z-index:5;"></div>
+
       </div>
+
+    </div>
       <!--<div class="card-subtitle">41 Listings</div>-->
   </ion-card>
   <ion-card style="">
     <br><h1 style="color:gray;">Monsters</h1><br>
-    <div *ngFor="let character of monsters" style="width:33%;padding: 20px; float:left;">
-            <img src="assets/imgs/logo.png"/><br>
-            {{character}}
+    <div *ngFor="let character of monsters; let i = index" style="width:33%;padding: 20px; float:left;">
+      <div style="position:relative;" (click)="selectCharacter(character)">
+
+        <img src = "assets/imgs/teamroster/{{character}}.png" id="{{character}}" style="">
+        {{character}}
+        <ng-container *ngIf="i % 3">
+          <br><br><br>
+        </ng-container>
+        <div id="{{character}}text" style="display: none;position:absolute;width:100%;text-align: center;height: auto;background-color:gray;opacity: 0.9;color:white;top:0;left:0;padding: 10px;font-size:16px;z-index:5;"></div>
+
+      </div>
+
       </div>
       <!--<div class="card-subtitle">41 Listings</div>-->
   </ion-card>

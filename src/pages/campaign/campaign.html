@@ -1,18 +1,22 @@
 <ion-header>
   <ion-navbar>
 
-    <ion-title style="text-align:center;">Choose your role ...</ion-title>
+    <ion-title style="text-align:center;">{{campaign}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content class="card-background-page">
 
-  <ion-card style="height:48%;" (click)="codex()">
-    <div class="card-title">Narrator</div>
+  <ion-card style="height:30%;" >
+    <div class="card-title">{{mission1}}</div>
       <!--<div class="card-subtitle">41 Listings</div>-->
   </ion-card>
-  <ion-card style="height:48%;" (click)="codex()">
-    <div class="card-title">Player</div>
+  <ion-card style="height:30%;">
+    <div class="card-title">{{mission2}}</div>
+      <!--<div class="card-subtitle">41 Listings</div>-->
+  </ion-card>
+  <ion-card style="height:30%;" >
+    <div class="card-title">{{mission3}}</div>
       <!--<div class="card-subtitle">41 Listings</div>-->
   </ion-card>
 
