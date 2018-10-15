@@ -26,9 +26,9 @@ export class ChooseTeamPage {
   selectCharacter(character) {
 
     console.log(character);
-    let id = character + "text";
+    let id = (character.name) + "text";
     let element: HTMLElement = document.getElementById(id);
-    console.log(element.classList.contains("selected"));
+    //console.log(element.classList.contains("selected"));
 
     if (element.classList.contains("selected")) { //if the character is currently selected
           //remove classes
@@ -39,14 +39,14 @@ export class ChooseTeamPage {
 
           //make middle div not show
           document.getElementById(id).style.display = "none";
-          document.getElementById(character).style.opacity = "1";
+          document.getElementById(character.name).style.opacity = "1";
 
           //reorder selected characters
           let number = 1;
 
           for (let choice of this.chosenCharacters) {
             console.log(choice + " " + number);
-            let choiceid = choice + "text";
+            let choiceid = choice.name + "text";
            var content = document.getElementById(choiceid);
             content.innerHTML = number +"";
             number++;
@@ -65,7 +65,7 @@ export class ChooseTeamPage {
 
            //make middle div show
            document.getElementById(id).style.display = "inline-block";
-           document.getElementById(character).style.opacity = "0.5";
+           document.getElementById(character.name).style.opacity = "0.5";
 
 
            //reorder selected characters
@@ -73,7 +73,7 @@ export class ChooseTeamPage {
 
            for (let choice of this.chosenCharacters) {
              console.log(choice + " " + number);
-             let choiceid = choice + "text";
+             let choiceid = choice.name + "text";
             var content = document.getElementById(choiceid);
              content.innerHTML = number +"";
              number++;

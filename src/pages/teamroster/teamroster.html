@@ -5,12 +5,344 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content class="card-background-page">
 
-  <ion-card style="height:auto;">
-    <div class="card-title">Leaders</div>
+<ion-content class="card-background-page" >
 
-  </ion-card>
+<!--<ion-card *ngFor="let character of chosenCharacters; let i = index">
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="assets/imgs/teamroster/{{character.name}}.png" >
+          </ion-avatar>
+          <h2>{{character.name}}</h2>
+          <div class="progress-outer">
+                  <div class="progress-inner" [style.width]="(progress1/750) + '%'">
+                    {{progress1}}
+                  </div>
+          </div>
+          <p></p>
+        </ion-item>
+        <img src="assets/imgs/teamroster/{{character.name}}.png" style="width:50% !important; margin:auto;">
+        <br><br>
+        <button ion-button color="secondary" (click)="alterExperience(1,i)">add experience</button>
+        <button ion-button color="danger" (click)="alterExperience(-1,i)">subtract experience</button>
+          <p>{{character.description}}</p>
+          <br>
+        <ion-row>
+          <ion-col>
+              <div>M: {{character.M}}</div>
+          </ion-col>
+          <ion-col>
+              <div>WS: {{character.WS}}</div>
+          </ion-col>
+          <ion-col>
+              <div>BS: {{character.BS}}</div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+              <div>S: {{character.S}}</div>
+          </ion-col>
+          <ion-col>
+              <div>T: {{character.T}}</div>
+          </ion-col>
+          <ion-col>
+              <div>W: {{character.W}}</div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+              <div>A: {{character.A}}</div>
+          </ion-col>
+          <ion-col>
+              <div>Ld: {{character.Ld}}</div>
+          </ion-col>
+          <ion-col>
+              <div>Sv: {{character.Sv}}</div>
+          </ion-col>
+        </ion-row>
+        <br><br>
+
+</ion-card>-->
+
+<ion-card>
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="assets/imgs/teamroster/{{character1.name}}.png" >
+          </ion-avatar>
+          <h2>{{character1.name}}</h2>
+          <div class="progress-outer">
+                  <div class="progress-inner" [style.width]="(progress1/750) + '%'">
+                    {{progress1}}
+                  </div>
+          </div>
+          <p></p>
+        </ion-item>
+        <img src="assets/imgs/teamroster/{{character1.name}}.png" style="width:50% !important; margin:auto;">
+        <br><br>
+        <button ion-button color="secondary" (click)="alterExperience(1,1)">add experience</button>
+        <button ion-button color="danger" (click)="alterExperience(-1,1)">subtract experience</button>
+        <br><br>
+          <p>{{character1.description}}</p>
+          <br>
+        <ion-row>
+          <ion-col>
+              <div>M: {{character1.M}}</div>
+          </ion-col>
+          <ion-col>
+              <div>WS: {{character1.WS}}</div>
+          </ion-col>
+          <ion-col>
+              <div>BS: {{character1.BS}}</div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+              <div>S: {{character1.S}}</div>
+          </ion-col>
+          <ion-col>
+              <div>T: {{character1.T}}</div>
+          </ion-col>
+          <ion-col>
+              <div>W: {{character1.W}}</div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+              <div>A: {{character1.A}}</div>
+          </ion-col>
+          <ion-col>
+              <div>Ld: {{character1.Ld}}</div>
+          </ion-col>
+          <ion-col>
+              <div>Sv: {{character1.Sv}}</div>
+          </ion-col>
+        </ion-row>
+        <br><br>
+</ion-card>
+
+<ion-card>
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="assets/imgs/teamroster/{{character2.name}}.png" >
+          </ion-avatar>
+          <h2>{{character2.name}}</h2>
+          <div class="progress-outer">
+                  <div class="progress-inner" [style.width]="(progress2/750) + '%'">
+                    {{progress2}}
+                  </div>
+          </div>
+          <p></p>
+        </ion-item>
+        <img src="assets/imgs/teamroster/{{character2.name}}.png" style="width:50% !important; margin:auto;">
+        <br><br>
+        <button ion-button color="secondary" (click)="alterExperience(1,2)">add experience</button>
+        <button ion-button color="danger" (click)="alterExperience(-1,2)">subtract experience</button>
+        <br><br>
+          <p>{{character1.description}}</p>
+          <br>
+        <ion-row>
+          <ion-col>
+              <div>M: {{character2.M}}</div>
+          </ion-col>
+          <ion-col>
+              <div>WS: {{character2.WS}}</div>
+          </ion-col>
+          <ion-col>
+              <div>BS: {{character2.BS}}</div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+              <div>S: {{character2.S}}</div>
+          </ion-col>
+          <ion-col>
+              <div>T: {{character2.T}}</div>
+          </ion-col>
+          <ion-col>
+              <div>W: {{character2.W}}</div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+              <div>A: {{character2.A}}</div>
+          </ion-col>
+          <ion-col>
+              <div>Ld: {{character2.Ld}}</div>
+          </ion-col>
+          <ion-col>
+              <div>Sv: {{character2.Sv}}</div>
+          </ion-col>
+        </ion-row>
+        <br><br>
+</ion-card>
+
+<ion-card>
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="assets/imgs/teamroster/{{character3.name}}.png" >
+          </ion-avatar>
+          <h2>{{character3.name}}</h2>
+          <div class="progress-outer">
+                  <div class="progress-inner" [style.width]="(progress3/750) + '%'">
+                    {{progress3}}
+                  </div>
+          </div>
+          <p></p>
+        </ion-item>
+        <img src="assets/imgs/teamroster/{{character3.name}}.png" style="width:50% !important; margin:auto;">
+        <br><br>
+        <button ion-button color="secondary" (click)="alterExperience(1,3)">add experience</button>
+        <button ion-button color="danger" (click)="alterExperience(-1,3)">subtract experience</button>
+        <br><br>
+          <p>{{character3.description}}</p>
+          <br>
+        <ion-row>
+          <ion-col>
+              <div>M: {{character3.M}}</div>
+          </ion-col>
+          <ion-col>
+              <div>WS: {{character3.WS}}</div>
+          </ion-col>
+          <ion-col>
+              <div>BS: {{character3.BS}}</div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+              <div>S: {{character3.S}}</div>
+          </ion-col>
+          <ion-col>
+              <div>T: {{character3.T}}</div>
+          </ion-col>
+          <ion-col>
+              <div>W: {{character3.W}}</div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+              <div>A: {{character3.A}}</div>
+          </ion-col>
+          <ion-col>
+              <div>Ld: {{character3.Ld}}</div>
+          </ion-col>
+          <ion-col>
+              <div>Sv: {{character3.Sv}}</div>
+          </ion-col>
+        </ion-row>
+        <br><br>
+</ion-card>
+
+<ion-card>
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="assets/imgs/teamroster/{{character4.name}}.png" >
+          </ion-avatar>
+          <h2>{{character4.name}}</h2>
+          <div class="progress-outer">
+                  <div class="progress-inner" [style.width]="(progress4/750) + '%'">
+                    {{progress4}}
+                  </div>
+          </div>
+          <p></p>
+        </ion-item>
+        <img src="assets/imgs/teamroster/{{character4.name}}.png" style="width:50% !important; margin:auto;">
+        <br><br>
+        <button ion-button color="secondary" (click)="alterExperience(1,4)">add experience</button>
+        <button ion-button color="danger" (click)="alterExperience(-1,4)">subtract experience</button>
+          <br><br>
+          <p>{{character4.description}}</p>
+          <br>
+        <ion-row>
+          <ion-col>
+              <div>M: {{character4.M}}</div>
+          </ion-col>
+          <ion-col>
+              <div>WS: {{character4.WS}}</div>
+          </ion-col>
+          <ion-col>
+              <div>BS: {{character4.BS}}</div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+              <div>S: {{character4.S}}</div>
+          </ion-col>
+          <ion-col>
+              <div>T: {{character4.T}}</div>
+          </ion-col>
+          <ion-col>
+              <div>W: {{character4.W}}</div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+              <div>A: {{character4.A}}</div>
+          </ion-col>
+          <ion-col>
+              <div>Ld: {{character4.Ld}}</div>
+          </ion-col>
+          <ion-col>
+              <div>Sv: {{character4.Sv}}</div>
+          </ion-col>
+        </ion-row>
+        <br><br>
+</ion-card>
+
+<ion-card>
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="assets/imgs/teamroster/{{character5.name}}.png" >
+          </ion-avatar>
+          <h2>{{character5.name}}</h2>
+          <div class="progress-outer">
+                  <div class="progress-inner" [style.width]="(progress5/750) + '%'">
+                    {{progress5}}
+                  </div>
+          </div>
+          <p></p>
+        </ion-item>
+        <img src="assets/imgs/teamroster/{{character5.name}}.png" style="width:50% !important; margin:auto;">
+        <br><br>
+        <button ion-button color="secondary" (click)="alterExperience(1,5)">add experience</button>
+        <button ion-button color="danger" (click)="alterExperience(-1,5)">subtract experience</button>
+          <br><br>
+          <p>{{character5.description}}</p>
+          <br>
+        <ion-row>
+          <ion-col>
+              <div>M: {{character5.M}}</div>
+          </ion-col>
+          <ion-col>
+              <div>WS: {{character5.WS}}</div>
+          </ion-col>
+          <ion-col>
+              <div>BS: {{character5.BS}}</div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+              <div>S: {{character5.S}}</div>
+          </ion-col>
+          <ion-col>
+              <div>T: {{character5.T}}</div>
+          </ion-col>
+          <ion-col>
+              <div>W: {{character5.W}}</div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+              <div>A: {{character5.A}}</div>
+          </ion-col>
+          <ion-col>
+              <div>Ld: {{character5.Ld}}</div>
+          </ion-col>
+          <ion-col>
+              <div>Sv: {{character5.Sv}}</div>
+          </ion-col>
+        </ion-row>
+        <br><br>
+</ion-card>
 
 
 
