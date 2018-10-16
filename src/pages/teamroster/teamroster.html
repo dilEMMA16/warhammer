@@ -28,40 +28,78 @@
           <br>
         <ion-row>
           <ion-col>
-              <div>M: {{character.M}}</div>
+              <div>Movement: {{character.M}}</div>
           </ion-col>
           <ion-col>
-              <div>WS: {{character.WS}}</div>
+              <div>Weapon Skill: {{character.WS}}</div>
           </ion-col>
           <ion-col>
-              <div>BS: {{character.BS}}</div>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col>
-              <div>S: {{character.S}}</div>
-          </ion-col>
-          <ion-col>
-              <div>T: {{character.T}}</div>
-          </ion-col>
-          <ion-col>
-              <div>W: {{character.W}}</div>
+              <div>Ballistic Skill: {{character.BS}}</div>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
-              <div>A: {{character.A}}</div>
+              <div>Strength: {{character.S}}</div>
           </ion-col>
           <ion-col>
-              <div>Ld: {{character.Ld}}</div>
+              <div>Toughness: {{character.T}}</div>
           </ion-col>
           <ion-col>
-              <div>Sv: {{character.Sv}}</div>
+              <div>Wounds: {{character.W}}</div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+              <div>Attacks: {{character.A}}</div>
+          </ion-col>
+          <ion-col>
+              <div>Leadership: {{character.Ld}}</div>
+          </ion-col>
+          <ion-col>
+              <div>Armour Save: {{character.Sv}}</div>
           </ion-col>
         </ion-row>
         <br><br>
 
 </ion-card>-->
+<button ion-button full  style= "background-color:#D6B33B !important;" id="showStatGuideButton" (click)="showStatGuide()">Stat Guide</button>
+<button ion-button full style= "display:none;background-color:#D6B33B !important;" id="hideStatGuideButton" (click)="hideStatGuide()">Hide</button>
+
+
+        <ion-row class=statGuide style="background-color:#ead383 !important;color:#5e4d13; text-align: center; display: none;border: 1px solid #dcdcdc;padding:10px;">
+          <ion-col>
+              <div>Movement<br><br>movement in inches</div>
+          </ion-col>
+          <ion-col>
+              <div>Weapon Skill<br><br>dice roll to hit in close combat phase</div>
+          </ion-col>
+          <ion-col>
+              <div>Ballistic Skill<br><br>dice roll to hit in shooting phase</div>
+          </ion-col>
+        </ion-row>
+        <ion-row class=statGuide style="background-color:#ead383 !important;color:#5e4d13; text-align: center;display: none;border: 1px solid #dcdcdc;padding:10px;">
+          <ion-col>
+              <div>Strength<br><br>strength of model in close combat phase</div>
+          </ion-col>
+          <ion-col>
+              <div>Toughness<br><br>resistance to strength of attacks</div>
+          </ion-col>
+          <ion-col>
+              <div>Wounds<br><br>health pool counts down till model suffers injury roll</div>
+          </ion-col>
+        </ion-row>
+        <ion-row class=statGuide style="background-color:#ead383 !important;color:#5e4d13; text-align: center;display: none;border: 1px solid #dcdcdc;padding:10px;">
+          <ion-col>
+              <div>Attacks<br><br>number of attacks in close combat phase</div>
+          </ion-col>
+          <ion-col>
+              <div>Leadership<br><br>stat used for leadership tests</div>
+          </ion-col>
+          <ion-col>
+              <div>Armour Save<br><br>dice roll to save against wounds</div>
+          </ion-col>
+        </ion-row>
+
 
 <ion-card>
         <ion-item>
@@ -85,35 +123,35 @@
           <br>
         <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
           <ion-col>
-              <div>M: {{character1.M}}</div>
+              <div>Movement<br><br>{{character1.M}}</div>
           </ion-col>
           <ion-col>
-              <div>WS: {{character1.WS}}</div>
+              <div>Weapon Skill<br><br>{{character1.WS}}</div>
           </ion-col>
           <ion-col>
-              <div>BS: {{character1.BS}}</div>
-          </ion-col>
-        </ion-row>
-        <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
-          <ion-col>
-              <div>S: {{character1.S}}</div>
-          </ion-col>
-          <ion-col>
-              <div>T: {{character1.T}}</div>
-          </ion-col>
-          <ion-col>
-              <div>W: {{character1.W}}</div>
+              <div>Ballistic Skill<br><br>{{character1.BS}}</div>
           </ion-col>
         </ion-row>
         <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
           <ion-col>
-              <div>A: {{character1.A}}</div>
+              <div>Strength<br><br>{{character1.S}}</div>
           </ion-col>
           <ion-col>
-              <div>Ld: {{character1.Ld}}</div>
+              <div>Toughness<br><br>{{character1.T}}</div>
           </ion-col>
           <ion-col>
-              <div>Sv: {{character1.Sv}}</div>
+              <div>Wounds<br><br>{{character1.W}}</div>
+          </ion-col>
+        </ion-row>
+        <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
+          <ion-col>
+              <div>Attacks<br><br> {{character1.A}}</div>
+          </ion-col>
+          <ion-col>
+              <div>Leadership<br><br> {{character1.Ld}}</div>
+          </ion-col>
+          <ion-col>
+              <div>Armour Save<br><br>{{character1.Sv}}</div>
           </ion-col>
         </ion-row>
           <br>
@@ -167,35 +205,35 @@
           <br>
         <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
           <ion-col>
-              <div>M: {{character2.M}}</div>
+              <div>Movement<br><br>{{character2.M}}</div>
           </ion-col>
           <ion-col>
-              <div>WS: {{character2.WS}}</div>
+              <div>Weapon Skill<br><br> {{character2.WS}}</div>
           </ion-col>
           <ion-col>
-              <div>BS: {{character2.BS}}</div>
-          </ion-col>
-        </ion-row>
-        <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
-          <ion-col>
-              <div>S: {{character2.S}}</div>
-          </ion-col>
-          <ion-col>
-              <div>T: {{character2.T}}</div>
-          </ion-col>
-          <ion-col>
-              <div>W: {{character2.W}}</div>
+              <div>Ballistic Skill<br><br>{{character2.BS}}</div>
           </ion-col>
         </ion-row>
         <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
           <ion-col>
-              <div>A: {{character2.A}}</div>
+              <div>Strength<br><br>{{character2.S}}</div>
           </ion-col>
           <ion-col>
-              <div>Ld: {{character2.Ld}}</div>
+              <div>Toughness<br><br>{{character2.T}}</div>
           </ion-col>
           <ion-col>
-              <div>Sv: {{character2.Sv}}</div>
+              <div>Wounds<br><br> {{character2.W}}</div>
+          </ion-col>
+        </ion-row>
+        <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
+          <ion-col>
+              <div>Attacks<br><br> {{character2.A}}</div>
+          </ion-col>
+          <ion-col>
+              <div>Leadership<br><br>{{character2.Ld}}</div>
+          </ion-col>
+          <ion-col>
+              <div>Armour Save<br><br> {{character2.Sv}}</div>
           </ion-col>
         </ion-row>
           <br>
@@ -249,35 +287,35 @@
           <br>
         <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
           <ion-col>
-              <div>M: {{character3.M}}</div>
+              <div>Movement<br><br>{{character3.M}}</div>
           </ion-col>
           <ion-col>
-              <div>WS: {{character3.WS}}</div>
+              <div>Weapon Skill<br><br> {{character3.WS}}</div>
           </ion-col>
           <ion-col>
-              <div>BS: {{character3.BS}}</div>
-          </ion-col>
-        </ion-row>
-        <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
-          <ion-col>
-              <div>S: {{character3.S}}</div>
-          </ion-col>
-          <ion-col>
-              <div>T: {{character3.T}}</div>
-          </ion-col>
-          <ion-col>
-              <div>W: {{character3.W}}</div>
+              <div>Ballistic Skill<br><br> {{character3.BS}}</div>
           </ion-col>
         </ion-row>
         <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
           <ion-col>
-              <div>A: {{character3.A}}</div>
+              <div>Strength<br><br> {{character3.S}}</div>
           </ion-col>
           <ion-col>
-              <div>Ld: {{character3.Ld}}</div>
+              <div>Toughness<br><br> {{character3.T}}</div>
           </ion-col>
           <ion-col>
-              <div>Sv: {{character3.Sv}}</div>
+              <div>Wounds<br><br>{{character3.W}}</div>
+          </ion-col>
+        </ion-row>
+        <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
+          <ion-col>
+              <div>Attacks<br><br> {{character3.A}}</div>
+          </ion-col>
+          <ion-col>
+              <div>Leadership<br><br>{{character3.Ld}}</div>
+          </ion-col>
+          <ion-col>
+              <div>Armour Save<br><br>{{character3.Sv}}</div>
           </ion-col>
         </ion-row>
           <br>
@@ -332,35 +370,35 @@
           <br>
         <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
           <ion-col>
-              <div>M: {{character4.M}}</div>
+              <div>Movement<br><br> {{character4.M}}</div>
           </ion-col>
           <ion-col>
-              <div>WS: {{character4.WS}}</div>
+              <div>Weapon Skill<br><br> {{character4.WS}}</div>
           </ion-col>
           <ion-col>
-              <div>BS: {{character4.BS}}</div>
-          </ion-col>
-        </ion-row>
-        <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
-          <ion-col>
-              <div>S: {{character4.S}}</div>
-          </ion-col>
-          <ion-col>
-              <div>T: {{character4.T}}</div>
-          </ion-col>
-          <ion-col>
-              <div>W: {{character4.W}}</div>
+              <div>Ballistic Skill<br><br> {{character4.BS}}</div>
           </ion-col>
         </ion-row>
         <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
           <ion-col>
-              <div>A: {{character4.A}}</div>
+              <div>Strength<br><br> {{character4.S}}</div>
           </ion-col>
           <ion-col>
-              <div>Ld: {{character4.Ld}}</div>
+              <div>Toughness<br><br> {{character4.T}}</div>
           </ion-col>
           <ion-col>
-              <div>Sv: {{character4.Sv}}</div>
+              <div>Wounds<br><br>{{character4.W}}</div>
+          </ion-col>
+        </ion-row>
+        <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
+          <ion-col>
+              <div>Attacks:<br><br> {{character4.A}}</div>
+          </ion-col>
+          <ion-col>
+              <div>Leadership<br><br> {{character4.Ld}}</div>
+          </ion-col>
+          <ion-col>
+              <div>Armour Save<br><br> {{character4.Sv}}</div>
           </ion-col>
         </ion-row>
           <br>
@@ -415,35 +453,35 @@
           <br>
         <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
           <ion-col >
-              <div>M: {{character5.M}}</div>
+              <div>Movement<br><br>{{character5.M}}</div>
           </ion-col>
           <ion-col >
-              <div>WS: {{character5.WS}}</div>
+              <div>Weapon Skill<br><br> {{character5.WS}}</div>
           </ion-col>
           <ion-col >
-              <div>BS: {{character5.BS}}</div>
+              <div>Ballistic Skill<br><br> {{character5.BS}}</div>
           </ion-col>
         </ion-row>
         <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
           <ion-col>
-              <div>S: {{character5.S}}</div>
+              <div>Strength<br><br> {{character5.S}}</div>
           </ion-col>
           <ion-col>
-              <div>T: {{character5.T}}</div>
+              <div>Toughness<br><br>{{character5.T}}</div>
           </ion-col>
           <ion-col>
-              <div>W: {{character5.W}}</div>
+              <div>Wounds<br><br>{{character5.W}}</div>
           </ion-col>
         </ion-row>
         <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
           <ion-col>
-              <div>A: {{character5.A}}</div>
+              <div>Attacks<br><br>{{character5.A}}</div>
           </ion-col>
           <ion-col>
-              <div>Ld: {{character5.Ld}}</div>
+              <div>Leadership<br><br>{{character5.Ld}}</div>
           </ion-col>
           <ion-col>
-              <div>Sv: {{character5.Sv}}</div>
+              <div>Armour Save<br><br> {{character5.Sv}}</div>
           </ion-col>
         </ion-row>
         <br>
@@ -477,11 +515,12 @@
 </ion-card>
 
 <div id=saveGameCard style="display:none;">
-  <ion-item>
+  <ion-item id=gameNameInput>
     <ion-label floating>Name your game ...</ion-label>
     <ion-input type="text" [(ngModel)]="gameName" style="width:50%;"></ion-input>
   </ion-item>
-  <button ion-button full color="secondary" style= "" (click)="saveGame()">Save</button>
+  <button ion-button full color="secondary" style= "" id="saveButton" (click)="saveGame()">Save</button>
+  <button ion-button full color="secondary" style= "" id="reSaveButton" (click)="reSaveGame()">Re-Save</button>
 </div>
 <button ion-button full color="primary" style= "" (click)="triggerSaveGame()">Save your stuff for later?</button>
 

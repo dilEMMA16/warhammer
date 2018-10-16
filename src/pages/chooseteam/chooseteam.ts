@@ -99,7 +99,10 @@ export class ChooseTeamPage {
               'abilities2' : abilities2,
               'abilities3' : abilities3,
               'abilities4' : abilities4,
-              'abilities5' : abilities5
+              'abilities5' : abilities5,
+              'reSave': false,
+              'indexOfGame': -1,
+              'gameName' : ""
             });
 
      }

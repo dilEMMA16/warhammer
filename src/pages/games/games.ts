@@ -29,7 +29,7 @@ export class GamesPage {
     //this.navCtrl.setRoot(GamesPage);
   }
 
-  navigateToTeamRosterPage(game) {
+  navigateToTeamRosterPage(game,index) {
     let chosenCharacters = new Array();
     chosenCharacters.push(game.character1);
     chosenCharacters.push(game.character2);
@@ -48,7 +48,10 @@ export class GamesPage {
          'abilities2' : game.abilities2,
          'abilities3' : game.abilities3,
          'abilities4' : game.abilities4,
-         'abilities5' : game.abilities5
+         'abilities5' : game.abilities5,
+         'reSave' : true,
+         'indexOfGame': index,
+         'gameName': game.name
        });
   }
 

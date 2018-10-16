@@ -14,7 +14,7 @@
     <ion-grid>
       <ion-row *ngFor="let game of savedGames; let i = index" >
         <ion-col col-11>
-          <button ion-button block style="height:8.6rem;" (click)="navigateToTeamRosterPage(game)" >
+          <button ion-button block style="height:8.6rem;" (click)="navigateToTeamRosterPage(game,i)" >
             {{game.name}}
           </button>
         </ion-col>

@@ -29,6 +29,8 @@ export class TeamRosterPage {
   abilities3: any[];
   abilities4: any[];
   abilities5: any[];
+  reSave: any;
+  indexOfGame:any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public saveGameProvider: SaveGameProvider) {
     this.chosenCharacters = navParams.get('chosenCharacters');
@@ -44,12 +46,18 @@ export class TeamRosterPage {
     this.character4 = this.chosenCharacters[3];
     this.character5 = this.chosenCharacters[4];
     this.abilityToAdd = "";
-    this.gameName= "";
+    this.gameName= navParams.get('gameName');;
     this.abilities1 = navParams.get('abilities1');
     this.abilities2 = navParams.get('abilities2');
     this.abilities3 = navParams.get('abilities3');
     this.abilities4 = navParams.get('abilities4');
     this.abilities5 = navParams.get('abilities5');
+    this.reSave = navParams.get('reSave');
+    this.indexOfGame = navParams.get('indexOfGame');
+    console.log(this.indexOfGame);
+
+
+
   }
 
   alterExperience(value,character) {
@@ -123,46 +131,85 @@ export class TeamRosterPage {
 
   }
 
+  showStatGuide(){
+    let x  = document.getElementsByClassName("statGuide");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        (x[i] as HTMLElement).style.display = "flex";
+    }
+
+      let hideStatGuideButton: HTMLElement = document.getElementById("hideStatGuideButton");
+        hideStatGuideButton.style.display = "block";
+        let showStatGuideButton: HTMLElement = document.getElementById("showStatGuideButton");
+          showStatGuideButton.style.display = "none";
+  }
+
+  hideStatGuide() {
+    let x  = document.getElementsByClassName("statGuide");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        (x[i] as HTMLElement).style.display = "none";
+    }
+
+      let hideStatGuideButton: HTMLElement = document.getElementById("hideStatGuideButton");
+        hideStatGuideButton.style.display = "none";
+        let showStatGuideButton: HTMLElement = document.getElementById("showStatGuideButton");
+          showStatGuideButton.style.display = "block";
+  }
+
   triggerSaveGame() {
 
     let element: HTMLElement = document.getElementById("saveGameCard");
       element.style.display = "block";
+    let saveButton: HTMLElement = document.getElementById("saveButton");
+    let reSaveButton: HTMLElement = document.getElementById("reSaveButton");
+    let gameNameInput: HTMLElement = document.getElementById("gameNameInput");
+
+    if (this.reSave) {
+      saveButton.style.display = "none";
+      reSaveButton.style.display = "block";
+      gameNameInput.style.display = "none";
+    } else {
+      saveButton.style.display = "block";
+      reSaveButton.style.display = "none";
+      gameNameInput.style.display = "block";
+    }
 
   }
 
   showDeleteButtons() {
-    var x = document.getElementsByClassName("deleteButton");
+    let x  = document.getElementsByClassName("deleteButton");
     var i;
     for (i = 0; i < x.length; i++) {
-        x[i].style.display = "inline";
+        (x[i] as HTMLElement).style.display = "inline";
     }
-    var x = document.getElementsByClassName("stopEdit");
+    x = document.getElementsByClassName("stopEdit");
     var i;
     for (i = 0; i < x.length; i++) {
-        x[i].style.display = "inline";
+        (x[i] as HTMLElement).style.display = "inline";
     }
-    var x = document.getElementsByClassName("edit");
+    x = document.getElementsByClassName("edit");
     var i;
     for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
+        (x[i] as HTMLElement).style.display = "none";
     }
   }
 
   hideDeleteButtons() {
-    var x = document.getElementsByClassName("deleteButton");
+    let x = document.getElementsByClassName("deleteButton");
     var i;
     for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
+        (x[i] as HTMLElement).style.display = "none";
     }
-    var x = document.getElementsByClassName("edit");
+    x = document.getElementsByClassName("edit");
     var i;
     for (i = 0; i < x.length; i++) {
-        x[i].style.display = "inline";
+        (x[i] as HTMLElement).style.display = "inline";
     }
-    var x = document.getElementsByClassName("stopEdit");
+    x = document.getElementsByClassName("stopEdit");
     var i;
     for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
+        (x[i] as HTMLElement).style.display = "none";
     }
   }
 
@@ -187,6 +234,10 @@ export class TeamRosterPage {
 
   saveGame() {
     this.saveGameProvider.saveGame(this.gameName,this.character1,this.character2,this.character3,this.character4,this.character5,this.progress1,this.progress2,this.progress3,this.progress4,this.progress5,this.abilities1,this.abilities2,this.abilities3,this.abilities4,this.abilities5);
+  }
+
+  reSaveGame() {
+      this.saveGameProvider.reSaveGame(this.indexOfGame,this.gameName,this.character1,this.character2,this.character3,this.character4,this.character5,this.progress1,this.progress2,this.progress3,this.progress4,this.progress5,this.abilities1,this.abilities2,this.abilities3,this.abilities4,this.abilities5);
   }
 
 
