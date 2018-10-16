@@ -118,10 +118,11 @@
         </ion-row>
           <br>
           <p>Abilities</p>
+
           <br>
         <ion-row>
           <ion-list >
-            <ion-item *ngFor="let ability of abilities1; let i = index">{{ability}}</ion-item>
+            <ion-item *ngFor="let ability of abilities1; let i = index">{{ability}} <button class="deleteButton" style="margin-left: 5px; display:none;" ion-button color="danger" (click) = "deleteAbility(1,i)">x</button></ion-item>
           </ion-list>
         </ion-row>
         <br>
@@ -138,6 +139,9 @@
               <button ion-button full color="secondary" style= "margin-top:15%;" (click)="addAbility(1)">+</button>
           </ion-col>
         </ion-row>
+        <br>
+         <button class=edit color="light" ion-button clear (click)="showDeleteButtons()">Edit Abilities</button>
+         <button class=stopEdit style="display:none;" color="light" ion-button clear (click)="hideDeleteButtons()">Stop Editing</button>
         <br><br>
 </ion-card>
 
@@ -159,7 +163,7 @@
         <button ion-button color="secondary" (click)="alterExperience(1,2)">add experience</button>
         <button ion-button color="danger" (click)="alterExperience(-1,2)">subtract experience</button>
         <br><br>
-          <p>{{character1.description}}</p>
+          <p>{{character2.description}}</p>
           <br>
         <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
           <ion-col>
@@ -200,7 +204,7 @@
         <ion-row>
 
           <ion-list >
-            <ion-item *ngFor="let ability of abilities2; let i = index">{{ability}}</ion-item>
+            <ion-item *ngFor="let ability of abilities2; let i = index">{{ability}}<button class="deleteButton" style="margin-left: 5px;display:none;" ion-button color="danger" (click) = "deleteAbility(2,i)">x</button></ion-item>
           </ion-list>
         </ion-row>
         <br>
@@ -217,6 +221,9 @@
               <button ion-button full color="secondary" style= "margin-top:15%;" (click)="addAbility(2)">+</button>
           </ion-col>
         </ion-row>
+        <br>
+         <button class=edit color="light" ion-button clear (click)="showDeleteButtons()">Edit Abilities</button>
+         <button class=stopEdit style="display:none;" color="light" ion-button clear (click)="hideDeleteButtons()">Stop Editing</button>
         <br><br>
 </ion-card>
 
@@ -275,11 +282,12 @@
         </ion-row>
           <br>
           <p>Abilities</p>
+          <button color="light" ion-button clear (click)="showDeleteButtons()">Edit Abilities</button>
           <br>
         <ion-row>
 
           <ion-list >
-            <ion-item *ngFor="let ability of abilities3; let i = index">{{ability}}</ion-item>
+            <ion-item *ngFor="let ability of abilities3; let i = index">{{ability}}<button class="deleteButton" style="margin-left: 5px;display:none;" ion-button color="danger" (click) = "deleteAbility(3,i)">x</button></ion-item>
           </ion-list>
         </ion-row>
         <br>
@@ -296,6 +304,9 @@
               <button ion-button full color="secondary" style= "margin-top:15%;" (click)="addAbility(3)">+</button>
           </ion-col>
         </ion-row>
+        <br>
+         <button class=edit color="light" ion-button clear (click)="showDeleteButtons()">Edit Abilities</button>
+         <button class=stopEdit style="display:none;" color="light" ion-button clear (click)="hideDeleteButtons()">Stop Editing</button>
         <br><br>
 </ion-card>
 
@@ -354,11 +365,12 @@
         </ion-row>
           <br>
           <p>Abilities</p>
+          <button color="light" ion-button clear (click)="showDeleteButtons()">Edit Abilities</button>
           <br>
         <ion-row>
 
           <ion-list >
-            <ion-item *ngFor="let ability of abilities4; let i = index">{{ability}}</ion-item>
+            <ion-item *ngFor="let ability of abilities4; let i = index">{{ability}}<button class="deleteButton" style="margin-left: 5px;display:none;" ion-button color="danger" (click) = "deleteAbility(4,i)">x</button></ion-item>
           </ion-list>
         </ion-row>
         <br>
@@ -375,6 +387,9 @@
             <button ion-button full color="secondary" style= "margin-top:15%;" (click)="addAbility(4)">+</button>
           </ion-col>
         </ion-row>
+        <br>
+         <button class=edit color="light" ion-button clear (click)="showDeleteButtons()">Edit Abilities</button>
+         <button class=stopEdit style="display:none;" color="light" ion-button clear (click)="hideDeleteButtons()">Stop Editing</button>
         <br><br>
 </ion-card>
 
@@ -433,11 +448,12 @@
         </ion-row>
         <br>
         <p>Abilities</p>
+        <button color="light" ion-button clear (click)="showDeleteButtons()">Edit Abilities</button>
         <br>
         <ion-row>
 
           <ion-list >
-            <ion-item *ngFor="let ability of abilities5; let i = index">{{ability}}</ion-item>
+            <ion-item *ngFor="let ability of abilities5; let i = index">{{ability}}<button class="deleteButton" style="margin-left: 5px;display:none;" ion-button color="danger" (click) = "deleteAbility(5,i)">x</button></ion-item>
           </ion-list>
         </ion-row>
         <br>
@@ -454,6 +470,9 @@
               <button ion-button full color="secondary" style= "margin-top:15%;" (click)="addAbility(5)">+</button>
           </ion-col>
         </ion-row>
+        <br>
+         <button class=edit color="light" ion-button clear (click)="showDeleteButtons()">Edit Abilities</button>
+         <button class=stopEdit style="display:none;" color="light" ion-button clear (click)="hideDeleteButtons()">Stop Editing</button>
         <br><br>
 </ion-card>
 

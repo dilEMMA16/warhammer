@@ -130,6 +130,61 @@ export class TeamRosterPage {
 
   }
 
+  showDeleteButtons() {
+    var x = document.getElementsByClassName("deleteButton");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "inline";
+    }
+    var x = document.getElementsByClassName("stopEdit");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "inline";
+    }
+    var x = document.getElementsByClassName("edit");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+  }
+
+  hideDeleteButtons() {
+    var x = document.getElementsByClassName("deleteButton");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    var x = document.getElementsByClassName("edit");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "inline";
+    }
+    var x = document.getElementsByClassName("stopEdit");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+  }
+
+
+  deleteAbility(character,index) {
+    if (character == 1){
+      this.abilities1.splice(index,1);
+    }
+    else if (character == 2){
+      this.abilities2.splice(index,1);
+    }
+    else if (character == 3){
+      this.abilities3.splice(index,1);
+    }
+    else if (character == 4){
+      this.abilities4.splice(index,1);
+    }
+    else if (character == 5){
+      this.abilities5.splice(index,1);
+    }
+  }
+
   saveGame() {
     this.saveGameProvider.saveGame(this.gameName,this.character1,this.character2,this.character3,this.character4,this.character5,this.progress1,this.progress2,this.progress3,this.progress4,this.progress5,this.abilities1,this.abilities2,this.abilities3,this.abilities4,this.abilities5);
   }
