@@ -12,9 +12,13 @@ import { TeamRosterPage } from '../pages/teamroster/teamroster';
 import { ChooseCampaignPage } from '../pages/choosecampaign/choosecampaign';
 import { CampaignPage } from '../pages/campaign/campaign';
 import { MissionPage } from '../pages/mission/mission';
+import { GamesPage } from '../pages/games/games';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { SaveGameProvider } from '../providers/save-game/save-game';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -27,12 +31,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TeamRosterPage,
     ChooseCampaignPage,
     CampaignPage,
-    MissionPage
+    MissionPage,
+    GamesPage
 
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -45,12 +51,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TeamRosterPage,
     ChooseCampaignPage,
     CampaignPage,
-    MissionPage
+    MissionPage,
+    GamesPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    SaveGameProvider
   ]
 })
 export class AppModule {}

@@ -82,9 +82,24 @@ export class ChooseTeamPage {
 
      //if length == 4 ---> go to font page
      if (this.chosenCharacters.length == 5) {
+        let abilities1 = new Array();
+        let abilities2  = new Array();
+        let abilities3  = new Array();
+        let abilities4  = new Array();
+        let abilities5  = new Array();
 
          this.navCtrl.push(TeamRosterPage, {
-              'chosenCharacters' : this.chosenCharacters
+              'chosenCharacters' : this.chosenCharacters,
+              'progress1' : 0,
+              'progress2' : 0,
+              'progress3' : 0,
+              'progress4' : 0,
+              'progress5' : 0,
+              'abilities1' : abilities1,
+              'abilities2' : abilities2,
+              'abilities3' : abilities3,
+              'abilities4' : abilities4,
+              'abilities5' : abilities5
             });
 
      }

@@ -1,6 +1,5 @@
 <ion-header>
   <ion-navbar>
-
     <ion-title style="text-align:center;">Team Roster</ion-title>
   </ion-navbar>
 </ion-header>
@@ -84,7 +83,7 @@
         <br><br>
           <p>{{character1.description}}</p>
           <br>
-        <ion-row>
+        <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
           <ion-col>
               <div>M: {{character1.M}}</div>
           </ion-col>
@@ -95,7 +94,7 @@
               <div>BS: {{character1.BS}}</div>
           </ion-col>
         </ion-row>
-        <ion-row>
+        <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
           <ion-col>
               <div>S: {{character1.S}}</div>
           </ion-col>
@@ -106,7 +105,7 @@
               <div>W: {{character1.W}}</div>
           </ion-col>
         </ion-row>
-        <ion-row>
+        <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
           <ion-col>
               <div>A: {{character1.A}}</div>
           </ion-col>
@@ -115,6 +114,28 @@
           </ion-col>
           <ion-col>
               <div>Sv: {{character1.Sv}}</div>
+          </ion-col>
+        </ion-row>
+          <br>
+          <p>Abilities</p>
+          <br>
+        <ion-row>
+          <ion-list >
+            <ion-item *ngFor="let ability of abilities1; let i = index">{{ability}}</ion-item>
+          </ion-list>
+        </ion-row>
+        <br>
+        <ion-row>
+          <ion-col>
+            <ion-list>
+            <ion-item>
+              <ion-label stacked>Add Ability</ion-label>
+              <ion-input type="text" [(ngModel)]="abilityToAdd"></ion-input>
+            </ion-item>
+            </ion-list>
+          </ion-col>
+          <ion-col>
+              <button ion-button full color="secondary" style= "margin-top:15%;" (click)="addAbility(1)">+</button>
           </ion-col>
         </ion-row>
         <br><br>
@@ -140,7 +161,7 @@
         <br><br>
           <p>{{character1.description}}</p>
           <br>
-        <ion-row>
+        <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
           <ion-col>
               <div>M: {{character2.M}}</div>
           </ion-col>
@@ -151,7 +172,7 @@
               <div>BS: {{character2.BS}}</div>
           </ion-col>
         </ion-row>
-        <ion-row>
+        <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
           <ion-col>
               <div>S: {{character2.S}}</div>
           </ion-col>
@@ -162,7 +183,7 @@
               <div>W: {{character2.W}}</div>
           </ion-col>
         </ion-row>
-        <ion-row>
+        <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
           <ion-col>
               <div>A: {{character2.A}}</div>
           </ion-col>
@@ -171,6 +192,29 @@
           </ion-col>
           <ion-col>
               <div>Sv: {{character2.Sv}}</div>
+          </ion-col>
+        </ion-row>
+          <br>
+          <p>Abilities</p>
+          <br>
+        <ion-row>
+
+          <ion-list >
+            <ion-item *ngFor="let ability of abilities2; let i = index">{{ability}}</ion-item>
+          </ion-list>
+        </ion-row>
+        <br>
+        <ion-row>
+          <ion-col>
+            <ion-list>
+            <ion-item>
+              <ion-label stacked>Add Ability</ion-label>
+              <ion-input type="text" [(ngModel)]="abilityToAdd"></ion-input>
+            </ion-item>
+            </ion-list>
+          </ion-col>
+          <ion-col>
+              <button ion-button full color="secondary" style= "margin-top:15%;" (click)="addAbility(2)">+</button>
           </ion-col>
         </ion-row>
         <br><br>
@@ -196,7 +240,7 @@
         <br><br>
           <p>{{character3.description}}</p>
           <br>
-        <ion-row>
+        <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
           <ion-col>
               <div>M: {{character3.M}}</div>
           </ion-col>
@@ -207,7 +251,7 @@
               <div>BS: {{character3.BS}}</div>
           </ion-col>
         </ion-row>
-        <ion-row>
+        <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
           <ion-col>
               <div>S: {{character3.S}}</div>
           </ion-col>
@@ -218,7 +262,7 @@
               <div>W: {{character3.W}}</div>
           </ion-col>
         </ion-row>
-        <ion-row>
+        <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
           <ion-col>
               <div>A: {{character3.A}}</div>
           </ion-col>
@@ -227,6 +271,29 @@
           </ion-col>
           <ion-col>
               <div>Sv: {{character3.Sv}}</div>
+          </ion-col>
+        </ion-row>
+          <br>
+          <p>Abilities</p>
+          <br>
+        <ion-row>
+
+          <ion-list >
+            <ion-item *ngFor="let ability of abilities3; let i = index">{{ability}}</ion-item>
+          </ion-list>
+        </ion-row>
+        <br>
+        <ion-row>
+          <ion-col>
+            <ion-list>
+            <ion-item>
+              <ion-label stacked>Add Ability</ion-label>
+              <ion-input type="text" [(ngModel)]="abilityToAdd"></ion-input>
+            </ion-item>
+            </ion-list>
+          </ion-col>
+          <ion-col>
+              <button ion-button full color="secondary" style= "margin-top:15%;" (click)="addAbility(3)">+</button>
           </ion-col>
         </ion-row>
         <br><br>
@@ -252,7 +319,7 @@
           <br><br>
           <p>{{character4.description}}</p>
           <br>
-        <ion-row>
+        <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
           <ion-col>
               <div>M: {{character4.M}}</div>
           </ion-col>
@@ -263,7 +330,7 @@
               <div>BS: {{character4.BS}}</div>
           </ion-col>
         </ion-row>
-        <ion-row>
+        <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
           <ion-col>
               <div>S: {{character4.S}}</div>
           </ion-col>
@@ -274,7 +341,7 @@
               <div>W: {{character4.W}}</div>
           </ion-col>
         </ion-row>
-        <ion-row>
+        <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
           <ion-col>
               <div>A: {{character4.A}}</div>
           </ion-col>
@@ -283,6 +350,29 @@
           </ion-col>
           <ion-col>
               <div>Sv: {{character4.Sv}}</div>
+          </ion-col>
+        </ion-row>
+          <br>
+          <p>Abilities</p>
+          <br>
+        <ion-row>
+
+          <ion-list >
+            <ion-item *ngFor="let ability of abilities4; let i = index">{{ability}}</ion-item>
+          </ion-list>
+        </ion-row>
+        <br>
+        <ion-row>
+          <ion-col>
+            <ion-list>
+            <ion-item>
+              <ion-label stacked>Add Ability</ion-label>
+              <ion-input type="text" [(ngModel)]="abilityToAdd"></ion-input>
+            </ion-item>
+            </ion-list>
+          </ion-col>
+          <ion-col>
+            <button ion-button full color="secondary" style= "margin-top:15%;" (click)="addAbility(4)">+</button>
           </ion-col>
         </ion-row>
         <br><br>
@@ -308,18 +398,18 @@
           <br><br>
           <p>{{character5.description}}</p>
           <br>
-        <ion-row>
-          <ion-col>
+        <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
+          <ion-col >
               <div>M: {{character5.M}}</div>
           </ion-col>
-          <ion-col>
+          <ion-col >
               <div>WS: {{character5.WS}}</div>
           </ion-col>
-          <ion-col>
+          <ion-col >
               <div>BS: {{character5.BS}}</div>
           </ion-col>
         </ion-row>
-        <ion-row>
+        <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
           <ion-col>
               <div>S: {{character5.S}}</div>
           </ion-col>
@@ -330,7 +420,7 @@
               <div>W: {{character5.W}}</div>
           </ion-col>
         </ion-row>
-        <ion-row>
+        <ion-row style="background-color:#f4f4f4 !important;border: 1px solid #dcdcdc;padding:10px;">
           <ion-col>
               <div>A: {{character5.A}}</div>
           </ion-col>
@@ -341,8 +431,40 @@
               <div>Sv: {{character5.Sv}}</div>
           </ion-col>
         </ion-row>
+        <br>
+        <p>Abilities</p>
+        <br>
+        <ion-row>
+
+          <ion-list >
+            <ion-item *ngFor="let ability of abilities5; let i = index">{{ability}}</ion-item>
+          </ion-list>
+        </ion-row>
+        <br>
+        <ion-row>
+          <ion-col>
+            <ion-list>
+            <ion-item>
+              <ion-label floating>Add Ability</ion-label>
+              <ion-input type="text" [(ngModel)]="abilityToAdd" style="width:50%;"></ion-input>
+            </ion-item>
+            </ion-list>
+          </ion-col>
+          <ion-col>
+              <button ion-button full color="secondary" style= "margin-top:15%;" (click)="addAbility(5)">+</button>
+          </ion-col>
+        </ion-row>
         <br><br>
 </ion-card>
+
+<div id=saveGameCard style="display:none;">
+  <ion-item>
+    <ion-label floating>Name your game ...</ion-label>
+    <ion-input type="text" [(ngModel)]="gameName" style="width:50%;"></ion-input>
+  </ion-item>
+  <button ion-button full color="secondary" style= "" (click)="saveGame()">Save</button>
+</div>
+<button ion-button full color="primary" style= "" (click)="triggerSaveGame()">Save your stuff for later?</button>
 
 
 

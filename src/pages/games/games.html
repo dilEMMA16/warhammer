@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+
+    <ion-title style="text-align:center;">Games ...</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+
+  <ion-card style="">
+    <button ion-button color="secondary" block style="height:8.6rem;" (click)="codex()" >
+      New Game
+    </button>
+    <ion-grid>
+      <ion-row *ngFor="let game of savedGames; let i = index" >
+        <ion-col col-11>
+          <button ion-button block style="height:8.6rem;" (click)="navigateToTeamRosterPage(game)" >
+            {{game.name}}
+          </button>
+        </ion-col>
+        <ion-col col-1><button ion-button color="danger" block style="height:8.6rem;"  (click)="deleteGame(game,i)">
+          X
+        </button></ion-col>
+      </ion-row>
+    </ion-grid>
+    <!-- <button ion-button full style="height:8.6rem;" *ngFor="let game of savedGames; let i = index" (click)="navigateToTeamRosterPage(game)" >
+      {{game.name}}
+    </button> -->
+  </ion-card>
+
+
+
+
+</ion-content>

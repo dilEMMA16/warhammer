@@ -12,6 +12,7 @@ import { TeamRosterPage } from '../pages/teamroster/teamroster';
 import { ChooseCampaignPage } from '../pages/choosecampaign/choosecampaign';
 import { CampaignPage } from '../pages/campaign/campaign';
 import { MissionPage } from '../pages/mission/mission';
+import { GamesPage } from '../pages/games/games';
 
 @Component({
   templateUrl: 'app.html'
@@ -36,7 +37,8 @@ export class MyApp {
       { title: 'Team Roster', component: TeamRosterPage },
       { title: 'Choose Campaign', component: ChooseCampaignPage },
       { title: 'Campaign', component: CampaignPage },
-      { title: 'Mission', component: MissionPage }
+      { title: 'Mission', component: MissionPage },
+      { title: 'Games', component: GamesPage }
     ];
 
   }

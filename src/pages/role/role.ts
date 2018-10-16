@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { CodexPage} from "../codex/codex";
+import { GamesPage} from "../games/games";
 import { ChooseCampaignPage} from "../choosecampaign/choosecampaign";
 
 
@@ -12,6 +13,10 @@ export class RolePage {
 
   constructor(public navCtrl: NavController) {
 
+  }
+
+  games() {
+    this.navCtrl.setRoot(GamesPage);
   }
   codex() {
     this.navCtrl.setRoot(CodexPage);
