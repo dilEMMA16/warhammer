@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
 
-    <ion-title style="text-align:center;">{{codex}}</ion-title>
+    <ion-title style="">{{codex}}</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -10,7 +10,7 @@
   <ion-card style="" >
     <br><h1 style="color:gray;">Leaders</h1><br>
     <div *ngFor="let character of leaders; let i = index" style="width:33%;padding: 20px; float:left;">
-      <div style="position:relative;" (click)="selectCharacter(character)">
+      <div style="position:relative;font-size: .8em !important;" (click)="selectCharacter(character)">
 
         <img src = "assets/imgs/teamroster/{{character.name}}.png" id="{{character.name}}" style="">
         {{character.name}}
@@ -28,7 +28,7 @@
     <br><h1 style="color:gray;">Members</h1><br>
     <div *ngFor="let character of members; let i = index" style="width:33%; height: 40%;padding: 20px; float:left; position:relative;" >
 
-      <div style="position:relative;" (click)="selectCharacter(character)">
+      <div style="position:relative;font-size: .8em !important;" (click)="selectCharacter(character)">
 
         <img src = "assets/imgs/teamroster/{{character.name}}.png" id="{{character.name}}" style="">
         {{character.name}}
@@ -45,7 +45,7 @@
   <ion-card style="">
     <br><h1 style="color:gray;">Monsters</h1><br>
     <div *ngFor="let character of monsters; let i = index" style="width:33%;padding: 20px; float:left;">
-      <div style="position:relative;" (click)="selectCharacter(character)">
+      <div style="position:relative;font-size: .8em !important;" (click)="selectCharacter(character)">
 
         <img src = "assets/imgs/teamroster/{{character.name}}.png" id="{{character.name}}" style="">
         {{character.name}}

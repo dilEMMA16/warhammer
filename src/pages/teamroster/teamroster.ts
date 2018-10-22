@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { NavParams } from 'ionic-angular';
 import { SaveGameProvider } from './../../providers/save-game/save-game';
+import { RolePage} from "../role/role";
 
 @Component({
   selector: 'page-teamroster',
@@ -58,6 +59,11 @@ export class TeamRosterPage {
 
 
 
+  }
+
+
+  gotostart(){
+    this.navCtrl.push(RolePage);
   }
 
   alterExperience(value,character) {
@@ -234,10 +240,14 @@ export class TeamRosterPage {
 
   saveGame() {
     this.saveGameProvider.saveGame(this.gameName,this.character1,this.character2,this.character3,this.character4,this.character5,this.progress1,this.progress2,this.progress3,this.progress4,this.progress5,this.abilities1,this.abilities2,this.abilities3,this.abilities4,this.abilities5);
+    let saveButton: HTMLElement = document.getElementById("saveButton");
+    saveButton.innerHTML = "your game has been saved!"
   }
 
   reSaveGame() {
       this.saveGameProvider.reSaveGame(this.indexOfGame,this.gameName,this.character1,this.character2,this.character3,this.character4,this.character5,this.progress1,this.progress2,this.progress3,this.progress4,this.progress5,this.abilities1,this.abilities2,this.abilities3,this.abilities4,this.abilities5);
+      let reSaveButton: HTMLElement = document.getElementById("reSaveButton");
+      reSaveButton.innerHTML = "your game has been resaved!"
   }
 
 
