@@ -26,6 +26,10 @@ export class GamesPage {
 
   deleteGame(game,index) {
     this.saveGameProvider.deleteGame(index,game.gameName,game.character1,game.character2,game.character3,game.character4,game.character5,game.experience1,game.experience2,game.experience3,game.experience4,game.experience5,game.abilities1,game.abilities2,game.abilities3,game.abilities4,game.abilities5);
+    this.saveGameProvider.getAllSavedGames().then(result => {
+      console.log("local storage for games on saved page" + result);
+      this.savedGames = result;
+    });
     //this.navCtrl.setRoot(GamesPage);
   }
 
