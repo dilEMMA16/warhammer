@@ -1,24 +1,34 @@
 <ion-header>
   <ion-navbar>
 
-    <ion-title style="text-align:center;">{{campaign}}</ion-title>
+    <ion-title style="">{{campaign.name}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content class="card-background-page">
 
-  <ion-card style="height:30%;" >
-    <div class="card-title">{{mission1}}</div>
+
+  <div *ngFor="let mission of missions; let i = index" (click)="selectMission(i)">
+
+
+  </div>
+
+  <ion-card *ngFor="let mission of missions; let i = index" (click)="selectMission(i)" style="height:30%;" >
+    <div class="card-title">{{mission.name}}</div>
       <!--<div class="card-subtitle">41 Listings</div>-->
   </ion-card>
-  <ion-card style="height:30%;">
+  <!-- <ion-card style="height:30%;">
     <div class="card-title">{{mission2}}</div>
-      <!--<div class="card-subtitle">41 Listings</div>-->
   </ion-card>
   <ion-card style="height:30%;" >
     <div class="card-title">{{mission3}}</div>
-      <!--<div class="card-subtitle">41 Listings</div>-->
   </ion-card>
+  <ion-card style="height:30%;" >
+    <div class="card-title">{{mission4}}</div>
+  </ion-card>
+  <ion-card style="height:30%;" >
+    <div class="card-title">{{mission5}}</div>
+  </ion-card> -->
 
 
 

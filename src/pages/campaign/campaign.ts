@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { NavParams } from 'ionic-angular';
-
+import { MissionPage} from "../mission/mission";
 
 @Component({
   selector: 'page-campaign',
@@ -10,15 +10,22 @@ import { NavParams } from 'ionic-angular';
 export class CampaignPage {
 
   campaign: any;
-  mission1 : any;
-  mission2 : any;
-  mission3 : any;
+  missions: any;
+  name: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.campaign = navParams.get('campaign');
-    this.mission1 = navParams.get('mission1');
-    this.mission2 = navParams.get('mission2');
-    this.mission3 = navParams.get('mission3');
+    this.missions = this.campaign.missions;
+    this.name = this.campaign.name;
+  }
+
+
+  selectMission(index) {
+    let selectedMission = this.missions[index];
+
+    this.navCtrl.push(MissionPage, {
+         'mission' : selectedMission
+       });
   }
 
 

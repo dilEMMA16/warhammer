@@ -1,18 +1,39 @@
 <ion-header>
   <ion-navbar>
 
-    <ion-title style="text-align:center;">Choose your role ...</ion-title>
+    <ion-title style="">{{name}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content class="card-background-page">
 
-  <ion-card style="height:48%;" (click)="codex()">
-    <div class="card-title">Narrator</div>
+  <ion-card style="height:auto;padding:25px;" >
+    {{description}}
+    <!-- <div class="card-title">{{}}</div> -->
       <!--<div class="card-subtitle">41 Listings</div>-->
   </ion-card>
-  <ion-card style="height:48%;" (click)="codex()">
-    <div class="card-title">Player</div>
+  <ion-card style="height:auto;padding:25px;" >
+    Objective<br><br>
+    {{objective}}
+    <!-- <div class="card-title">Player</div> -->
+      <!--<div class="card-subtitle">41 Listings</div>-->
+  </ion-card>
+  <ion-card style="height:auto;padding:25px;">
+    Special Rules<br><br>
+    {{specialRules}}
+    <!-- <div class="card-title">Player</div> -->
+      <!--<div class="card-subtitle">41 Listings</div>-->
+  </ion-card>
+  <ion-card style="height:auto;padding:25px;">
+    Allies<br><br>
+    {{allies}}
+    <!-- <div class="card-title">Player</div> -->
+      <!--<div class="card-subtitle">41 Listings</div>-->
+  </ion-card>
+  <ion-card style="height:auto;padding:25px;" >
+    Enemies<br><br>
+    {{enemies}}
+    <!-- <div class="card-title">Player</div> -->
       <!--<div class="card-subtitle">41 Listings</div>-->
   </ion-card>
 
