@@ -16,6 +16,7 @@ export class MissionPage {
   allies: any;
   enemies: any;
 
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.mission = navParams.get('mission');
     this.name = this.mission.name;
@@ -24,6 +25,7 @@ export class MissionPage {
     this.specialRules = this.mission.specialRules;
     this.allies = this.mission.allies;
     this.enemies = this.mission.enemies;
+
   }
 
 

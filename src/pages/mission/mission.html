@@ -1,37 +1,44 @@
 <ion-header>
   <ion-navbar>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <ion-title style="">{{name}}</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content class="card-background-page">
+<ion-content class="card-background-page" style="color:#fff;">
 
-  <ion-card style="height:auto;padding:25px;" >
+  <ion-card style="height:auto;padding:25px;background-color:#512558; color:#a84db7;" >
+    <i class="fa fa-quote-right" aria-hidden="true" style="font-size:4em;"></i><br><br>
+  <span style="font-family: 'Sedgwick Ave Display', cursive;font-size:2em;">Description</span><br><br>
     {{description}}
     <!-- <div class="card-title">{{}}</div> -->
       <!--<div class="card-subtitle">41 Listings</div>-->
   </ion-card>
-  <ion-card style="height:auto;padding:25px;" >
-    Objective<br><br>
+  <ion-card style="height:auto;padding:25px;background-color:#581f16 !important;color:#ba412e;" >
+  <i class="fa fa-bullseye" aria-hidden="true"style="font-size:4em;"></i><br><br>
+    <span style="font-family: 'Sedgwick Ave Display', cursive;font-size:2em;">Objective</span><br><br>
+
     {{objective}}
     <!-- <div class="card-title">Player</div> -->
       <!--<div class="card-subtitle">41 Listings</div>-->
   </ion-card>
-  <ion-card style="height:auto;padding:25px;">
-    Special Rules<br><br>
+  <ion-card style="height:auto;padding:25px;background-color:#284358;color:#528ab5;">
+  <i class="fa fa-info-circle" aria-hidden="true"style="font-size:4em;"></i><br><br>
+      <span style="font-family: 'Sedgwick Ave Display', cursive;font-size:2em;">Special Rules</span><br><br>
     {{specialRules}}
     <!-- <div class="card-title">Player</div> -->
       <!--<div class="card-subtitle">41 Listings</div>-->
   </ion-card>
-  <ion-card style="height:auto;padding:25px;">
-    Allies<br><br>
+  <ion-card style="height:auto;padding:25px;background-color:#576047 !important;color:#abbc8b;">
+  <i class="fa fa-thumbs-up" aria-hidden="true"style="font-size:4em;"></i><br><br>
+      <span style="font-family: 'Sedgwick Ave Display', cursive;font-size:2em;">Allies</span><br><br>
     {{allies}}
     <!-- <div class="card-title">Player</div> -->
       <!--<div class="card-subtitle">41 Listings</div>-->
   </ion-card>
-  <ion-card style="height:auto;padding:25px;" >
-    Enemies<br><br>
+  <ion-card style="height:auto;padding:25px;background-color:#2f5834 !important;color:#55a05f;" >
+  <i class="fa fa-thumbs-down" aria-hidden="true"style="font-size:4em;"></i><br><br>
+      <span style="font-family: 'Sedgwick Ave Display', cursive;font-size:2em;">Enemies</span><br><br>
     {{enemies}}
     <!-- <div class="card-title">Player</div> -->
       <!--<div class="card-subtitle">41 Listings</div>-->

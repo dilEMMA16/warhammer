@@ -7,20 +7,40 @@ page-campaign {
 
   .card-title {
     position: absolute;
-    top: 30%;//was 36
-    font-size: 4.0em;
+    top: 36%;//was 36
+    font-size: 3.0em;
     width: 100%;
 
     font-family: 'Sedgwick Ave Display', cursive;
-    color: gray;
+    //color: gray;
   }
 
+  .one {
+    background-color: #2f5834;
+    color: #55a05f;
+  }
+  .two {
+    background-color: #576047;
+    color: #abbc8b;
+  }
+  .three {
+    background-color: #284358;
+    color: #528ab5;
+  }
+  .four {
+    background-color: #581f16;
+    color: #ba412e;
+  }
+  .five {
+    background-color: #512558;
+    color: #a84db7;
+  }
   .card-subtitle {
     font-size: 1.0em;
     position: absolute;
     top: 52%;
     width: 100%;
-    color: #fff;
+    //color: #fff;
   }
 
 }

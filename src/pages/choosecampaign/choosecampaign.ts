@@ -24,6 +24,7 @@ export class ChooseCampaignPage {
     let mission5:any;
     let missions= new Array();
 
+
     if (name.includes("Byzant")) {
       let description = "Hired as bodyguards your xenos warband is instructed by your new employer to keep his seat of power. The planetary governor Julian Conscord would have never thought of hiring xenos mercenaries to keep the peace. Since the opening of the Great Rift and the subsequent loss of supplies and troops from Consord’s ties in Terra, he has little option left to keep his loose hold on the planet together.";
       let objective = "protect the planetary governor and escort him to his safe escape onboard his Planetary Defence Force transport";
@@ -35,14 +36,14 @@ export class ChooseCampaignPage {
       mission3 = {name:"Mission 3",description:"",objective:"",specialRules:"",allies:"",enemies:""};
       mission4 = {name:"Mission 4",description:"",objective:"",specialRules:"",allies:"",enemies:""};
       mission5 = {name:"Mission 5",description:"",objective:"",specialRules:"",allies:"",enemies:""};
-      console.log (mission1);
+      //console.log (mission1);
       missions.push(mission1);
       missions.push(mission2);
       missions.push(mission3);
       missions.push(mission4);
       missions.push(mission5);
-      campaign = {name:name, missions:missions};
-      console.log(campaign);
+      campaign = {name:name, missions:missions, mainColor:"#2f5834", fontColor:"#55a05f",class:"one"};
+      //console.log(campaign);
     }
     else if (name.includes("Snuffalufagus")) {
       mission1 =  {name:"Mission 1",description:"",objective:"",specialRules:"",allies:"",enemies:""};
@@ -55,7 +56,7 @@ export class ChooseCampaignPage {
       missions.push(mission3);
       missions.push(mission4);
       missions.push(mission5);
-      campaign = {name:name, missions:missions};
+      campaign = {name:name, missions:missions, mainColor:"#576047", fontColor:"#abbc8b",class:"two"};
     }
     else if (name.includes("Mibitties")) {
       mission1 =  {name:"Mission 1",description:"",objective:"",specialRules:"",allies:"",enemies:""};
@@ -68,7 +69,7 @@ export class ChooseCampaignPage {
       missions.push(mission3);
       missions.push(mission4);
       missions.push(mission5);
-      campaign = {name:name, missions:missions};
+      campaign = {name:name, missions:missions, mainColor:"#284358", fontColor:"#528ab5",class:"three"};
     }
     else if (name.includes("Fuxcellent")) {
       mission1 =  {name:"Mission 1",description:"",objective:"",specialRules:"",allies:"",enemies:""};
@@ -81,7 +82,7 @@ export class ChooseCampaignPage {
       missions.push(mission3);
       missions.push(mission4);
       missions.push(mission5);
-      campaign = {name:name, missions:missions};
+      campaign = {name:name, missions:missions, mainColor:"#581f16", fontColor:"#ba412e",class:"four"};
     }
     else if (name.includes("Phussi")) {
       mission1 =  {name:"Mission 1",description:"",objective:"",specialRules:"",allies:"",enemies:""};
@@ -94,7 +95,7 @@ export class ChooseCampaignPage {
       missions.push(mission3);
       missions.push(mission4);
       missions.push(mission5);
-      campaign = {name:name, missions:missions};
+      campaign = {name:name, missions:missions, mainColor:"#512558", fontColor:"#a84db7",class:"five"};
     }
 
 

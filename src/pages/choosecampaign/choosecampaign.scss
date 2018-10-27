@@ -10,21 +10,21 @@ page-choosecampaign {
 
   .card-title {
     position: absolute;
-    top: 30%;//was 36
-    font-size: 2.0em;
+    top: 26%;//was 36
+    font-size: 3.0em;
     width: 100%;
-    font-weight: bold;
+  //  font-weight: bold;
     //font-family: 'Anaheim', sans-serif;
-    //font-family: 'Sedgwick Ave Display', cursive;
-    color: #fff;
+    font-family: 'Sedgwick Ave Display', cursive;
+    //color: #fff;
   }
 
   .card-subtitle {
     font-size: 1.0em;
     position: absolute;
-    top: 60%;
+    top: 65%;
     width: 100%;
-    color: #fff;
+    //color: #fff;
   }
 
 }
