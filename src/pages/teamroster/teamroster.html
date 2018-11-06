@@ -515,6 +515,11 @@
          <button class=stopEdit style="display:none;color:#999"  ion-button clear (click)="hideDeleteButtons()">Stop Editing</button>
         <br><br>
 </ion-card>
+<ion-card style="padding:30px;background-color:#cecece;">
+  <h1 style="color:gray;font-size:2rem;">Game Notes</h1><br>
+  <textarea rows="8" [(ngModel)]="gameNotes" cols="30" style="color:#4f4c4c;border:none;padding:8px;" placeholder="put field notes here...">
+  </textarea>
+</ion-card>
 
 <div id=saveGameCard style="display:none;">
   <ion-item id=gameNameInput>

@@ -55,7 +55,8 @@ export class GamesPage {
          'abilities5' : game.abilities5,
          'reSave' : true,
          'indexOfGame': index,
-         'gameName': game.name
+         'gameName': game.name,
+         'gameNotes':game.gameNotes
        });
   }
 

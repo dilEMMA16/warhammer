@@ -17,8 +17,8 @@ export class SaveGameProvider {
   }
 
 
-  saveGame(gameName,char1,char2,char3,char4,char5,exp1,exp2,exp3,exp4,exp5,abi1,abi2,abi3,abi4,abi5) {
-    let game = {name:gameName,character1:char1,character2:char2,character3:char3,character4:char4,character5:char5,experience1:exp1,experience2:exp2,experience3:exp3,experience4:exp4,experience5:exp5,abilities1:abi1,abilities2:abi2,abilities3:abi3,abilities4:abi4,abilities5:abi5};
+  saveGame(gameName,char1,char2,char3,char4,char5,exp1,exp2,exp3,exp4,exp5,abi1,abi2,abi3,abi4,abi5,gameNotes) {
+    let game = {name:gameName,character1:char1,character2:char2,character3:char3,character4:char4,character5:char5,experience1:exp1,experience2:exp2,experience3:exp3,experience4:exp4,experience5:exp5,abilities1:abi1,abilities2:abi2,abilities3:abi3,abilities4:abi4,abilities5:abi5,gameNotes:gameNotes};
     return this.getAllSavedGames().then(result => {
       console.log("local storage for save gave " + result);
       if (result) {
@@ -28,8 +28,8 @@ export class SaveGameProvider {
     });
   }
 
-  reSaveGame(index,gameName,char1,char2,char3,char4,char5,exp1,exp2,exp3,exp4,exp5,abi1,abi2,abi3,abi4,abi5) {
-    let game = {name:gameName,character1:char1,character2:char2,character3:char3,character4:char4,character5:char5,experience1:exp1,experience2:exp2,experience3:exp3,experience4:exp4,experience5:exp5,abilities1:abi1,abilities2:abi2,abilities3:abi3,abilities4:abi4,abilities5:abi5};
+  reSaveGame(index,gameName,char1,char2,char3,char4,char5,exp1,exp2,exp3,exp4,exp5,abi1,abi2,abi3,abi4,abi5,gameNotes) {
+    let game = {name:gameName,character1:char1,character2:char2,character3:char3,character4:char4,character5:char5,experience1:exp1,experience2:exp2,experience3:exp3,experience4:exp4,experience5:exp5,abilities1:abi1,abilities2:abi2,abilities3:abi3,abilities4:abi4,abilities5:abi5,gameNotes:gameNotes};
     return this.getAllSavedGames().then(result => {
       console.log("local storage for save gave " + result);
       if (result) {

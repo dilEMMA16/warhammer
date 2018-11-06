@@ -12,7 +12,7 @@
     <div *ngFor="let character of leaders; let i = index" style="width:33%;padding: 20px; float:left;">
       <div style="position:relative;font-size: .8em !important;" (click)="selectCharacter(character)">
 
-        <img src = "assets/imgs/teamroster/{{character.name}}.png" id="{{character.name}}" style="">
+        <img src = "assets/imgs/{{character.name}}.png" id="{{character.name}}" style="">
         {{character.name}}
         <ng-container *ngIf="i % 3">
           <br><br><br>
@@ -30,7 +30,7 @@
 
       <div style="position:relative;font-size: .8em !important;" (click)="selectCharacter(character)">
 
-        <img src = "assets/imgs/teamroster/{{character.name}}.png" id="{{character.name}}" style="">
+        <img src = "assets/imgs/{{character.name}}.png" id="{{character.name}}" style="">
         {{character.name}}
         <ng-container *ngIf="i % 3">
           <br><br><br>
@@ -47,7 +47,7 @@
     <div *ngFor="let character of monsters; let i = index" style="width:33%;padding: 20px; float:left;">
       <div style="position:relative;font-size: .8em !important;" (click)="selectCharacter(character)">
 
-        <img src = "assets/imgs/teamroster/{{character.name}}.png" id="{{character.name}}" style="">
+        <img src = "assets/imgs/{{character.name}}.png" id="{{character.name}}" style="">
         {{character.name}}
         <ng-container *ngIf="i % 3">
           <br><br><br>

@@ -102,7 +102,8 @@ export class ChooseTeamPage {
               'abilities5' : abilities5,
               'reSave': false,
               'indexOfGame': -1,
-              'gameName' : ""
+              'gameName' : "",
+              'gameNotes':""
             });
 
      }

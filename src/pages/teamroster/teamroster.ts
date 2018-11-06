@@ -32,6 +32,7 @@ export class TeamRosterPage {
   abilities5: any[];
   reSave: any;
   indexOfGame:any;
+  gameNotes: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public saveGameProvider: SaveGameProvider) {
     this.chosenCharacters = navParams.get('chosenCharacters');
@@ -47,7 +48,8 @@ export class TeamRosterPage {
     this.character4 = this.chosenCharacters[3];
     this.character5 = this.chosenCharacters[4];
     this.abilityToAdd = "";
-    this.gameName= navParams.get('gameName');;
+    this.gameName= navParams.get('gameName');
+    this.gameNotes=navParams.get('gameNotes');
     this.abilities1 = navParams.get('abilities1');
     this.abilities2 = navParams.get('abilities2');
     this.abilities3 = navParams.get('abilities3');
@@ -239,13 +241,13 @@ export class TeamRosterPage {
   }
 
   saveGame() {
-    this.saveGameProvider.saveGame(this.gameName,this.character1,this.character2,this.character3,this.character4,this.character5,this.progress1,this.progress2,this.progress3,this.progress4,this.progress5,this.abilities1,this.abilities2,this.abilities3,this.abilities4,this.abilities5);
+    this.saveGameProvider.saveGame(this.gameName,this.character1,this.character2,this.character3,this.character4,this.character5,this.progress1,this.progress2,this.progress3,this.progress4,this.progress5,this.abilities1,this.abilities2,this.abilities3,this.abilities4,this.abilities5,this.gameNotes);
     let saveButton: HTMLElement = document.getElementById("saveButton");
     saveButton.innerHTML = "your game has been saved!"
   }
 
   reSaveGame() {
-      this.saveGameProvider.reSaveGame(this.indexOfGame,this.gameName,this.character1,this.character2,this.character3,this.character4,this.character5,this.progress1,this.progress2,this.progress3,this.progress4,this.progress5,this.abilities1,this.abilities2,this.abilities3,this.abilities4,this.abilities5);
+      this.saveGameProvider.reSaveGame(this.indexOfGame,this.gameName,this.character1,this.character2,this.character3,this.character4,this.character5,this.progress1,this.progress2,this.progress3,this.progress4,this.progress5,this.abilities1,this.abilities2,this.abilities3,this.abilities4,this.abilities5,this.gameNotes);
       let reSaveButton: HTMLElement = document.getElementById("reSaveButton");
       reSaveButton.innerHTML = "your game has been resaved!"
   }
